@@ -20,8 +20,8 @@ class ResultFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         arguments?.let{
-            val playerName = ResultFragmentArgs.fromBundle(requireArguments()).playerScore
-            textScore.text = "Your score is $playerName"
+            val finalScore = ResultFragmentArgs.fromBundle(requireArguments()).playerScore
+            textScore.text = "Your score is $finalScore"
         }
 
         btnBackMain.setOnClickListener {
